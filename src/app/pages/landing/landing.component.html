@@ -1,0 +1,33 @@
+<header class="header">
+  <nav class="nav">
+    <div class="logo">Personal</div>
+    <ul class="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Project</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+      <button class="resume-btn">Resume</button>
+    </ul>
+  </nav>
+</header>
+
+<main class="main">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello I'am <span>Evren Shah.</span></h1>
+      <h2>Frontend <span>Developer</span></h2>
+      <h3>Based In <span>India.</span></h3>
+      <p class="description">
+        I'm Sagar Shah. Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+      </p>
+      <div class="social-links">
+        <a *ngFor="let social of socialLinks" [href]="social.url" class="social-icon">
+          <i class="icon-{{social.icon}}"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="../../assets/landingimage.png" alt="Developer illustration">
+    </div>
+  </section>
+</main>

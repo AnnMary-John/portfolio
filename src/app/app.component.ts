@@ -1,12 +1,38 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true,
+  imports: [RouterModule],
+  template: `
+    
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  `,
+  styles: [`
+    nav {
+      display: flex;
+      gap: 1rem;
+      background: #111;
+      padding: 1rem;
+    }
+    a {
+      color: #eee;
+      text-decoration: none;
+    }
+    main {
+      
+      color: #fff;
+      background: white;
+      min-height: 100vh;
+    }
+  `]
 })
 export class AppComponent {
-  title = 'ann-mary-portfolio';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
 }
